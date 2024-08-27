@@ -2,6 +2,107 @@
 
 # Changelog
 
+### [Version 1.13.2](https://github.com/lobehub/lobe-chat/compare/v1.13.1...v1.13.2)
+
+<sup>Released on **2024-08-27**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Bypass vercel deployment protection, fix can send message on uploading files.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Bypass vercel deployment protection, closes [#3627](https://github.com/lobehub/lobe-chat/issues/3627) ([47da20d](https://github.com/lobehub/lobe-chat/commit/47da20d))
+- **misc**: Fix can send message on uploading files, closes [#3618](https://github.com/lobehub/lobe-chat/issues/3618) ([fe4329a](https://github.com/lobehub/lobe-chat/commit/fe4329a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.13.1](https://github.com/lobehub/lobe-chat/compare/v1.13.0...v1.13.1)
+
+<sup>Released on **2024-08-27**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update Qwen models.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update Qwen models, closes [#3626](https://github.com/lobehub/lobe-chat/issues/3626) ([4393386](https://github.com/lobehub/lobe-chat/commit/4393386))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.13.0](https://github.com/lobehub/lobe-chat/compare/v1.12.20...v1.13.0)
+
+<sup>Released on **2024-08-27**</sup>
+
+#### ✨ Features
+
+- **misc**: Supports Authelia login.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Supports Authelia login, closes [#3589](https://github.com/lobehub/lobe-chat/issues/3589) ([2141ae7](https://github.com/lobehub/lobe-chat/commit/2141ae7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.12.20](https://github.com/lobehub/lobe-chat/compare/v1.12.19...v1.12.20)
+
+<sup>Released on **2024-08-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Feature flag `knowledge_base` doesn't affect ActionBar.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Feature flag `knowledge_base` doesn't affect ActionBar, closes [#3609](https://github.com/lobehub/lobe-chat/issues/3609) ([1a5286b](https://github.com/lobehub/lobe-chat/commit/1a5286b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.12.19](https://github.com/lobehub/lobe-chat/compare/v1.12.18...v1.12.19)
 
 <sup>Released on **2024-08-25**</sup>

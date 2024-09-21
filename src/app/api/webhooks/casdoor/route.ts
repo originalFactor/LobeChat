@@ -7,7 +7,7 @@ import { NextAuthUserService } from '@/server/services/nextAuthUser';
 import { validateRequest } from './validateRequest';
 
 export const POST = async (req: Request): Promise<NextResponse> => {
-  const payload = await validateRequest(req, authEnv.LOGTO_WEBHOOK_SIGNING_KEY!);
+  const payload = await validateRequest(req, authEnv.CASDOOR_WEBHOOK_SECRET);
 
   if (!payload) {
     return NextResponse.json(
@@ -16,31 +16,31 @@ export const POST = async (req: Request): Promise<NextResponse> => {
     );
   }
 
-  const { event, data } = payload;
+  const { action, extendedUser } = payload;
 
-  pino.trace(`logto webhook payload: ${{ data, event }}`);
+  pino.trace(`casdoor webhook payload: ${{ action, extendedUser }}`);
 
   const nextAuthUserService = new NextAuthUserService();
-  switch (event) {
-    case 'User.Data.Updated': {
+  switch (action) {
+    case 'update-user': {
       return nextAuthUserService.safeUpdateUser(
         {
-          provider: 'logto',
-          providerAccountId: data.id,
+          provider: 'casdoor',
+          providerAccountId: extendedUser.id,
         },
         {
-          avatar: data?.avatar,
-          email: data?.primaryEmail,
-          fullName: data?.name,
+          avatar: extendedUser?.avatar,
+          email: extendedUser?.email,
+          fullName: extendedUser.displayName,
         },
       );
     }
 
     default: {
       pino.warn(
-        `${req.url} received event type "${event}", but no handler is defined for this type`,
+        `${req.url} received event type "${action}", but no handler is defined for this type`,
       );
-      return NextResponse.json({ error: `unrecognised payload type: ${event}` }, { status: 400 });
+      return NextResponse.json({ error: `unrecognised payload type: ${action}` }, { status: 400 });
     }
   }
 };
